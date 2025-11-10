@@ -1,0 +1,21 @@
+@url=http://localhost:3000
+
+### Registro
+POST {{url}}/usuarios/registro
+Content-Type: application/json
+
+{
+    "nombre": "alan",
+    "email": "alan.maldonado@gmail.com",
+    "contraseña": "Hola1234"
+}
+
+### Login
+POST {{url}}/usuarios/login
+Content-Type: application/json
+
+{
+    "email": "alan.maldonado@gmail.com",
+    "contraseña": "Hola1234"
+}
+
