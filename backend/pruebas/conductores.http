@@ -1,0 +1,33 @@
+@url=http://localhost:3000
+
+
+### Obtener todos los conductores
+GET {{url}}/conductores
+
+
+### Crear un nuevo conductor
+POST {{url}}/conductores
+Content-Type: application/json
+
+{
+   "nombre": "Jorge",
+   "apellido": "Maldonado",
+   "dni": "29449320",
+   "licencia": "comun",
+   "vencimiento_licencia": "2026-12-18"
+}
+
+### Actualizar un conductor
+PUT {{url}}/conductores/9
+Content-Type: application/json
+
+{
+   "nombre": "Jorge",
+   "apellido": "Maldonado",
+   "dni": "29449320",
+   "licencia": "profesional",
+   "vencimiento_licencia": "2026-12-18"
+}
+
+### Eliminar un conductor
+DELETE {{url}}/conductores/2
