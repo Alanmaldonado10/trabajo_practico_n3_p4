@@ -1,0 +1,34 @@
+@url=http://localhost:3000
+
+### Consultar todos los vehiculos
+GET {{url}}/vehiculos
+
+### Obtener los km totales de un vehiculo
+GET {{url}}/vehiculos/kilometros/1
+
+### Crear un nuevo vehiculo 
+POST {{url}}/vehiculos
+Content-Type: application/json
+
+{
+    "marca": "fiat",
+    "modelo": "cronos",
+    "patente": "frh 943", 
+    "año": 2023,
+    "capacidad_carga": 300
+}
+
+### Actualizar un vehiculo
+PUT {{url}}/vehiculos/3
+Content-Type: application/json
+
+{
+    "marca": "peugeot",
+    "modelo": "208",
+    "patente": "frh 943", 
+    "año": 2019,
+    "capacidad_carga": 200
+}
+
+### Eliminar un vehiculo
+DELETE {{url}}/vehiculos/1

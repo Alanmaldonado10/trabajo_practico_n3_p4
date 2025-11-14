@@ -4,6 +4,8 @@
 ### Obtener todos los conductores
 GET {{url}}/conductores
 
+### Obtener los kilometros hecho por un conductor
+GET {{url}}/conductores/kilometros/1
 
 ### Crear un nuevo conductor
 POST {{url}}/conductores
