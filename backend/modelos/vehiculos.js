@@ -28,6 +28,10 @@ const Vehiculo = {
     obtenerPatente: async (patente) => {
         const [rows] = await db.execute("SELECT * FROM vehiculos WHERE patente=?", [patente])
         return rows[0]
+    },
+     obtenerPorId: async (id) => {
+        const [rows] = await db.execute("SELECT * FROM vehiculos WHERE id=?", [id])
+        return rows[0]
     }
 }
 

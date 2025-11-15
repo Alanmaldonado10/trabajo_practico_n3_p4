@@ -112,6 +112,19 @@ const conductorControlador = {
       console.error(error);
       res.status(500).json({ success: false, message: "Algo salio mal al mostrar los kilometros totales del conductor" })
     }
+  },
+  obtenerPorId: async (req, res) => {
+    try {
+      const id = Number(req.params.id)
+
+      const conductor = await Conductor.obtenerPorId(id);
+
+      res.status(200).json({ success: true, data: conductor });
+
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, errores: ["Error al obtener el conductor"] })
+    }
   }
 }
 

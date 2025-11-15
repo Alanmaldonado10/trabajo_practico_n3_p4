@@ -5,7 +5,8 @@ import { verificarValidaciones, validarId } from "../validaciones/verificar-vali
 
 const router = express.Router();
 
-router.get("/", conductorControlador.obtener)
+router.get("/", conductorControlador.obtener);
+router.get("/:id", [validarId, verificarValidaciones], conductorControlador.obtenerPorId)
 router.get("/kilometros/:id", [validarId, verificarValidaciones], conductorControlador.obtenerKm);
 router.post("/", [validarBody , verificarValidaciones], conductorControlador.crear)
 router.put("/:id", [validarId, validarBody , verificarValidaciones], conductorControlador.actualizar)

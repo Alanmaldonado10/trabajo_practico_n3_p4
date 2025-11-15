@@ -31,3 +31,28 @@
     /* Original: 118.75% */
   }
 }
+button:hover{
+  background-color: rgb(5, 255, 234);
+}
+h1 { 
+  color: aliceblue;
+  animation-name: changeColor;
+  animation-duration: 5s ;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+}
+h2 { 
+  color: aliceblue;
+  animation-name: changeColor;
+  animation-duration: 5s ;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+}
+@keyframes changeColor {
+  from { color: rgb(255, 0, 0); }
+
+  to {color: rgb(255, 0, 170); }
+
+}

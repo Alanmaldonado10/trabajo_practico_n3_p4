@@ -28,8 +28,8 @@ Content-Type: application/json
 {
     "vehiculo_id": 3, 
     "conductor_id": 9,
-    "fecha_salida": "2025-11-13", 
-    "fecha_llegada": "2025-11-14", 
+    "fecha_salida": "2025-11-14", 
+    "fecha_llegada": "2025-11-15", 
     "origen": "La Rioja", 
     "destino": "Cordoba", 
     "kilometros": 500, 

@@ -113,6 +113,19 @@ const vehiculoControlador = {
       console.error(error);
       res.status(500).json({ success: false, message: "Algo salio mal al calcular los kilometros totales del vehiculo" })
     }
+  },
+   obtenerPorId: async (req, res) => {
+    try {
+      const id = Number(req.params.id)
+
+      const vehiculo = await Vehiculo.obtenerPorId(id);
+
+      res.status(200).json({ success: true, data: vehiculo });
+
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, errores: ["Error al obtener el vehiculo"] })
+    }
   }
 };
 

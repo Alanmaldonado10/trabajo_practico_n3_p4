@@ -26,6 +26,10 @@ const Conductor = {
     obtenerxDni: async (dni) => {
         const [rows] = await db.execute("SELECT * FROM conductores WHERE dni=?", [dni])
         return rows[0]
+    },
+    obtenerPorId: async (id) => {
+        const [rows] = await db.execute("SELECT * FROM conductores WHERE id=?", [id])
+        return rows[0]
     }
 }
 

@@ -122,6 +122,19 @@ const viajeControlador = {
             console.error(error);
             res.status(500).json({ success: false, message: "Error al obtener los viajes del conductor" })
         }
+    },
+    obtenerPorId: async (req, res) => {
+       try {
+            const id = Number(req.params.id)
+
+            const viaje = await Viaje.obtenerPorId(id);
+
+            res.status(200).json({ success: true, data: viaje});
+
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ success: false, errores:["Error al obtener el viaje"] })
+        }
     }
 }
 

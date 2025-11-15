@@ -1,12 +1,12 @@
 import express from "express";
 import cors from "cors";
 import { conectarDB } from "./db.js";
-import authConfig from "./validaciones/auth.js";
 import usuariosRoutes from "./rutas/usuarios.js";
 import conductoresRoutes from "./rutas/conductores.js";
 import vehiculosRoutes from "./rutas/vehiculos.js"
 import viajesRoutes from "./rutas/viajes.js";
-import { verificarAutenticacion } from "./validaciones/auth.js";
+import authConfig from "./auth.js";
+import { verificarAutenticacion } from "./auth.js";
 conectarDB();
 
 const app = express();

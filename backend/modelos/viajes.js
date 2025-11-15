@@ -22,6 +22,16 @@ const Viaje = {
     },
     eliminar: async (id) => {
         await db.execute("DELETE FROM viajes WHERE id=?", [id])
+    },
+    obtenerPorId: async (id) => {
+        let sql = "SELECT c.nombre AS nombre_conductor, c.apellido AS apellido_conductor, c.dni AS dni_conductor," +
+            " v.marca, v.modelo, v.patente," +
+            " vj.id AS id_viaje, vj.fecha_salida, vj.fecha_llegada, vj.origen, vj.destino, vj.kilometros, vj.observaciones" +
+            " FROM viajes vj" +
+            " JOIN conductores c ON c.id = vj.conductor_id JOIN vehiculos v ON v.id = vj.vehiculo_id WHERE vj.id = ?"
+
+        const [rows] = await db.execute(sql, [id])
+        return rows[0]
     }
 }
 
